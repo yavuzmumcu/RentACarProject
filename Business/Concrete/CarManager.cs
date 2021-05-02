@@ -26,9 +26,14 @@ namespace Business.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Car> GetAll()
+        public Car Entity(Car entity)
         {
             throw new NotImplementedException();
+        }
+
+        public List<Car> GetAll()
+        {
+            return _carDal.GetAll();
         }
 
         public List<Car> GetById(Car entity)

@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Abstract;
+using DataAccess.Concrete;
 using DataAccess.Concrete.EntityFreamwork;
 using Entities.Concrete;
 using System;
@@ -13,9 +14,15 @@ namespace ConsolePL
         static void Main(string[] args)
         {
 
-            ICarDal carDal =new EfCarDal();
+            ICarDal carDal = new InMemoryCarDal();
+
             CarManager carManager = new CarManager(carDal);
-            carManager.Add(new Car { });
+            
+
+            foreach (var car in carManager.GetAll())
+            {
+                Console.WriteLine(car.ModelYear);
+            } ;
         }
     }
 }
