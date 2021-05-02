@@ -11,6 +11,6 @@ namespace Core.DataAccess
         void Update(T entity);
         void Delete(T entity);
         void GetById(T entity);
-        void GetAll(T entity);
+        List<T> GetAll(T entity);
     }
 }
