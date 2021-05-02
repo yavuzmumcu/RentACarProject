@@ -10,7 +10,7 @@ namespace Core.DataAccess
         void Add(T entity);
         void Update(T entity);
         void Delete(T entity);
-        void GetById(T entity);
-        List<T> GetAll(T entity);
+        List<T> GetById(T entity);
+        List<T> GetAll();
     }
 }
